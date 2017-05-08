@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Woman as Cyborg &#8226; Journal Entry 2187-05-08</title>
+		<link rel="apple-touch-icon" href="/images/compass.png"/>
+		<link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="http://zoeterhune.com/favicon.ico" />
+		<link rel="stylesheet" href="/assets/normalize.css">
+		<link rel="stylesheet" href="/assets/main.css">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+		<link rel="canonical" href="http://zoeterhune.com/">
+		<script src="/assets/typed.js"></script>
+		<script src="/assets/jquery-3.2.1.min.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function(){
+				Typed.new(".entry", {
+					strings: ["We met again, years later. I hadn\u2019t seen her after that first WIRE meeting; she stopped going. I never saw her around campus, either. At that time, WIRE had become a full-fledged organization, providing women with resources for coping, like counseling services. Unfortunately, that\u2019s all we can do right now. Help women cope.\r\n\r\nBut some senior employees, those of us who have been there since the early days, are selected to temp for the companies that help in the creation and the implementation of the implant\u2014we work undercover to get information about what they\u2019re trying to do next. Why these companies let women work for them in the first place, I\u2019m unsure. It\u2019s like a sick mockery. It\u2019s the opposite of biting the hand that feeds. It\u2019s feeding the thing that bites. But these jobs give us opportunities to work against new developments in the implant, to protest new functionalities before they\u2019re announced. \r\n\r\nI was sent to work for the company that manufactures the brain probes, just as a secretary for one of the big bosses. And so, as it happens, was Maple. \r\n\r\nI sat at my desk the first day, which happened to be right next to hers. I didn\u2019t recognize her at all, but she must have known who I was. \u201CWe meet again,\u201D she said\r\n"],
+					typeSpeed: 30
+				});
+			});
+		</script>
+		<script>
+			$(document).ready(function() {
+				startCount();
+			});
+
+			function startCount() {
+				timer = setInterval(count, 1000);
+			}
+
+			function count() {
+				var time_shown = $("#realtime").text();
+				var time_chunks = time_shown.split(":");
+				var hour, mins, secs;
+
+				hour = Number(time_chunks[0]);
+				mins = Number(time_chunks[1]);
+				secs = Number(time_chunks[2]);
+				secs++;
+				if (secs == 60) {
+					secs = 0;
+					mins = mins + 1;
+				}
+				if (mins == 60) {
+					mins = 0;
+					hour = hour + 1;
+				}
+				if (hour == 13) {
+					hour = 1;
+				}
+
+				$("#realtime").text(hour + ":" + plz(mins) + ":" + plz(secs));
+
+			}
+
+			function plz(digit) {
+
+				var zpad = digit + '';
+				if (digit < 10) {
+					zpad = "0" + zpad;
+				}
+				return zpad;
+			}
+		</script>
+		<style>
+			body {
+				background: black;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>May 8<sup>th</sup> 2187 <span id="realtime">15:12:57</span></h3>
+		<span class="entry"></span>
+		<a href="/3/">Next</a>
+	</body>
+</html>

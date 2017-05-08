@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Woman as Cyborg &#8226; Journal Entry 2174-12-07</title>
+		<link rel="apple-touch-icon" href="/images/compass.png"/>
+		<link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="http://zoeterhune.com/favicon.ico" />
+		<link rel="stylesheet" href="/assets/normalize.css">
+		<link rel="stylesheet" href="/assets/main.css">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+		<link rel="canonical" href="http://zoeterhune.com/">
+		<script src="/assets/typed.js"></script>
+		<script src="/assets/jquery-3.2.1.min.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function(){
+				Typed.new(".entry", {
+					strings: ["I don\u2019t remember the process of the implantation. I\u2019ve never thought much of it; I suppose I took the anesthesia for granted. I met a girl today, a senior, whose parents were unable to afford anesthetic when her implant was put in. I met her at the first meeting for a new club, WIRE. Women for Implant Removal and Equity. I\u2019m not sure if the acronym was meant to be as ironic as it sounds. WIRE. We\u2019re all wired to this little clock that determines our usefulness and, ultimately, our deaths.\r\n\r\nWe went around introducing ourselves. We were asked to talk about one way in which our implants have impacted us, negatively or positively, if we were comfortable with it. Everyone\u2019s experiences were, to say the least, rather negative. This girl introduced herself as Maple, like the trees that aren\u2019t around so much anymore, the trees you only hear about. And then she talked about her implantation process.\r\n\r\n\u201CThey started with the ovary probes. I\u2019m not going to go into the gruesome details of the surgery. You\u2019d think the first motions of the blade would be the worst. But it\u2019s not really the pain that\u2019s the worst, it\u2019s the feeling of coldness. Once your body\u2019s open like that, it\u2019s like all of the winds of the world are rushing into you at once, trying to fill you up and dry you out. You\u2019re also just so vulnerable. There are several unfamiliar men surrounding you. Even if you did know them, you wouldn\u2019t be able to tell. Their faces are almost completely covered by their masks. They\u2019re expressionless, faceless. Like they\u2019re trying to hide their identities because if they are discernibly an individual they have to take responsibility for cutting open a conscious thirteen year old.\u201D\r\n\r\nAt that point several people had gotten up to leave. I suddenly recalled something my mother had once said to my father in passing, something about how she had never been under anesthesia. I felt compelled to stay, as if I had to know what it must have been like for my mother. I don\u2019t know why, really. I\u2019ve never totally understood that mindset, but here I was, listening to this anecdote that made my bowels churn because I felt like it brought me closer to my mother, or something. \r\n\r\n\u201CThe probes were colder still. I didn\u2019t see them; I have no idea what they looked like, but it felt like they stuck little, electrically charged metal rods into me. I don\u2019t have a better way of describing it. Then they closed me and moved on to my wrist. One of the nurses\u2014a man\u2014held my right hand. It was like this weird impersonal procedure was suddenly between two close friends, or father and daughter. Well, I think that\u2019s how he wanted it to seem. I don\u2019t remember feeling particularly comforted by that. It felt to me more like he was trying to restrain me, to prevent me from flinching and pulling away and ruining their surgery. It didn\u2019t even feel like my surgery, like I was watching, only from extremely close up. But anyway, this nurse was holding my hand because suddenly that sharp pain had moved into my wrist. They were cutting open the space for my implant. It nestled in and, weirdly\u2014this is the part I hate. It felt like I was filled, like I was complete. It was probably because I\u2019d been open for a long time, at this point. But when this little piece of clockwork slid into that open wound, I thought I was done. I thought I was a whole woman. Complete. Like everyone else.\r\n\r\n\u201CBut at the time, I didn\u2019t know about the brain implant. The part that kills you, the part that drives you crazy when your implant tells your body it\u2019s time to stop working. They actually numbed my scalp a little bit for this. I\u2019m not sure if that was the procedure or if it was because I was a little too, um, resistant. I won\u2019t flatter myself, actually. It was probably just part of the procedure. I\u2019m sure every other girl was as loud and unstable as me. Anyway, you used to have to be awake for brain surgeries, so they can talk to you, make sure they haven\u2019t hit the wrong part of the brain or something. I kind of wish that was still the case, so other people would at least understand part of it. The brain doesn\u2019t have any nerve endings, so it doesn\u2019t hurt when they\u2019re prodding around in your skull like that. The knowledge that another human is literally sticking little tools and machines in your head is the worst part of that. They planted that probe, the killing probe, into me and put me back together. They sewed my scalp back together and rolled me out to my parents again. I didn\u2019t sleep for a week or so after.\u201D\r\n\r\nBy the time Maple had finished speaking, most of the meeting\u2019s attendees had left. She stood up, looked around, hand on her implant. Then she left.\r\n"],
+					typeSpeed: 30
+				});
+			});
+		</script>
+		<script>
+			$(document).ready(function() {
+				startCount();
+			});
+
+			function startCount() {
+				timer = setInterval(count, 1000);
+			}
+
+			function count() {
+				var time_shown = $("#realtime").text();
+				var time_chunks = time_shown.split(":");
+				var hour, mins, secs;
+
+				hour = Number(time_chunks[0]);
+				mins = Number(time_chunks[1]);
+				secs = Number(time_chunks[2]);
+				secs++;
+				if (secs == 60) {
+					secs = 0;
+					mins = mins + 1;
+				}
+				if (mins == 60) {
+					mins = 0;
+					hour = hour + 1;
+				}
+				if (hour == 13) {
+					hour = 1;
+				}
+
+				$("#realtime").text(hour + ":" + plz(mins) + ":" + plz(secs));
+
+			}
+
+			function plz(digit) {
+
+				var zpad = digit + '';
+				if (digit < 10) {
+					zpad = "0" + zpad;
+				}
+				return zpad;
+			}
+		</script>
+		<style>
+			body {
+				background: black;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>December 7<sup>th</sup> 2174 <span id="realtime">18:27:28</span></h3>
+		<span class="entry"></span>
+		<a href="/3/">Next</a>
+	</body>
+</html>

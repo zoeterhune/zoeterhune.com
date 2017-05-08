@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Woman as Cyborg &#8226; Journal Entry 2167-02-08</title>
+		<link rel="apple-touch-icon" href="/images/compass.png"/>
+		<link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="http://zoeterhune.com/favicon.ico" />
+		<link rel="stylesheet" href="/assets/normalize.css">
+		<link rel="stylesheet" href="/assets/main.css">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+		<link rel="canonical" href="http://zoeterhune.com/">
+		<script src="/assets/typed.js"></script>
+		<script src="/assets/jquery-3.2.1.min.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function(){
+				Typed.new(".entry", {
+					strings: ["I got the implant today. It still hurts a little but they knock you out before they stick it in. If you can afford to be knocked out. I woke up in the hospital with the little green screen sitting in my wrist, with the numbers counting down the days to something, not sure what. They just wait for you to get your period and suddenly there\u2019s a number in your wrist. 13995. My wrist hurts. And my stomach.\r\n\r\nBut I guess what happened before I went to the hospital is kind of important. It\u2019s different. I woke up and the sheets on my bed had red stains so I knew I had gotten my period. They tell you in school to tell your dad immediately, so he can take you to the doctor, but Dad wasn\u2019t home so I talked to Mom instead. She went into my room and had this total meltdown when she saw all the blood on the sheets and stuff. She ripped my sheets off the bed and took them into the bathroom, and turned on the sink and started scrubbing at them. Her fingers turned red in the cold water and when the sink was full of kind of pink soapy water she squeezed the sheets so all the water came out. I guess they weren\u2019t clean enough because she just pushed past me to go to the laundry room. She wasn\u2019t exactly crying but her eyes were sort of red and wet. Dad got home from a meeting or something and saw her with the bloody sheets and suddenly we were in the car going to the hospital. Mom was looking at her hands in her lap. They were red and a little bloody from all the scrubbing.\r\n"],
+					typeSpeed: 30
+				});
+			});
+		</script>
+		<script>
+			$(document).ready(function() {
+				startCount();
+			});
+
+			function startCount() {
+				timer = setInterval(count, 1000);
+			}
+
+			function count() {
+				var time_shown = $("#realtime").text();
+				var time_chunks = time_shown.split(":");
+				var hour, mins, secs;
+
+				hour = Number(time_chunks[0]);
+				mins = Number(time_chunks[1]);
+				secs = Number(time_chunks[2]);
+				secs++;
+				if (secs == 60) {
+					secs = 0;
+					mins = mins + 1;
+				}
+				if (mins == 60) {
+					mins = 0;
+					hour = hour + 1;
+				}
+				if (hour == 13) {
+					hour = 1;
+				}
+
+				$("#realtime").text(hour + ":" + plz(mins) + ":" + plz(secs));
+
+			}
+
+			function plz(digit) {
+
+				var zpad = digit + '';
+				if (digit < 10) {
+					zpad = "0" + zpad;
+				}
+				return zpad;
+			}
+		</script>
+		<style>
+			body {
+				background: black;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>February 8<sup>th</sup> 2167 <span id="realtime">08:14:48</span></h3>
+		<span class="entry"></span>
+		<a href="/2/">Next</a>
+	</body>
+</html>

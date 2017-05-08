@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Woman as Cyborg &#8226; Journal Entry 2205-06-21</title>
+		<link rel="apple-touch-icon" href="/images/compass.png"/>
+		<link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="http://zoeterhune.com/favicon.ico" />
+		<link rel="stylesheet" href="/assets/normalize.css">
+		<link rel="stylesheet" href="/assets/main.css">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+		<link rel="canonical" href="http://zoeterhune.com/">
+		<script src="/assets/typed.js"></script>
+		<script src="/assets/jquery-3.2.1.min.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function(){
+				Typed.new(".entry", {
+					strings: ["Die"],
+					typeSpeed: 30
+				});
+			});
+		</script>
+		<script>
+			$(document).ready(function() {
+				startCount();
+			});
+
+			function startCount() {
+				timer = setInterval(count, 1000);
+			}
+
+			function count() {
+				var time_shown = $("#realtime").text();
+				var time_chunks = time_shown.split(":");
+				var hour, mins, secs;
+
+				hour = Number(time_chunks[0]);
+				mins = Number(time_chunks[1]);
+				secs = Number(time_chunks[2]);
+				secs++;
+				if (secs == 60) {
+					secs = 0;
+					mins = mins + 1;
+				}
+				if (mins == 60) {
+					mins = 0;
+					hour = hour + 1;
+				}
+				if (hour == 13) {
+					hour = 1;
+				}
+
+				$("#realtime").text(hour + ":" + plz(mins) + ":" + plz(secs));
+
+			}
+
+			function plz(digit) {
+
+				var zpad = digit + '';
+				if (digit < 10) {
+					zpad = "0" + zpad;
+				}
+				return zpad;
+			}
+		</script>
+		<style>
+			body {
+				background: black;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>June 21<sup>st</sup> 2205 <span id="realtime">00:00:00</span></h3>
+		<span class="entry"></span>
+	</body>
+</html>
