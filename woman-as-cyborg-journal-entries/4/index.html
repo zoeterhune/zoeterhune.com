@@ -69,11 +69,32 @@
 				color: white;
 				padding: 1em;
 			}
+			.typed-cursor{
+				opacity: 1;
+				-webkit-animation: blink 0.7s infinite;
+				-moz-animation: blink 0.7s infinite;
+				animation: blink 0.7s infinite;
+			}
+			@keyframes blink{
+				0% { opacity:1; }
+				50% { opacity:0; }
+				100% { opacity:1; }
+			}
+			@-webkit-keyframes blink{
+				0% { opacity:1; }
+				50% { opacity:0; }
+				100% { opacity:1; }
+			}
+			@-moz-keyframes blink{
+				0% { opacity:1; }
+				50% { opacity:0; }
+				100% { opacity:1; }
+			}
 		</style>
 	</head>
 	<body>
 		<h3>May 8<sup>th</sup> 2187 <span id="realtime">15:12:57</span></h3>
-		<a href="/woman-as-cyborg-journal-entries/5/" style="color: white; text-align: center;">Next</a>
+		<a href="/woman-as-cyborg-journal-entries/5/" style="color: white; text-align: center; font-weight: bold;">Next</a>
 		<span class="entry"></span>
 	</body>
 </html>

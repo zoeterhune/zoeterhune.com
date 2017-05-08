@@ -25,11 +25,32 @@
 				color: white;
 				padding: 1em;
 			}
+			.typed-cursor{
+				opacity: 1;
+				-webkit-animation: blink 0.7s infinite;
+				-moz-animation: blink 0.7s infinite;
+				animation: blink 0.7s infinite;
+			}
+			@keyframes blink{
+				0% { opacity:1; }
+				50% { opacity:0; }
+				100% { opacity:1; }
+			}
+			@-webkit-keyframes blink{
+				0% { opacity:1; }
+				50% { opacity:0; }
+				100% { opacity:1; }
+			}
+			@-moz-keyframes blink{
+				0% { opacity:1; }
+				50% { opacity:0; }
+				100% { opacity:1; }
+			}
 		</style>
 	</head>
 	<body>
 		<h3 style="text-align: center;">Woman as Cyborg Journal Entries</h3>
 		<p style="text-align: center;">This text includes descriptions of self-harm, death, and medical procedures. Reader discretion is advised.</p>
-		<center><a href="./1/" style="color: white;"><span class="entry"></span></a></center>
+		<center><a href="/woman-as-cyborg-journal-entries/1/" style="color: white; font-weight: bold;"><span class="entry"></span></a></center>
 	</body>
 </html>
